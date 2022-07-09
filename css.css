@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hamburger-item{
+    /* padding-top: 100px; */
+    transform: translate(-110%);
+    padding: 1rem;
+    width: 30%;
+    /* border: green solid 2px; */
+    transition: transform 0.5s ease-in-out;
+    background:rgba(44, 40, 40, 0.816);
+    /* margin-top: -5rem; */
+
+
+}
+.hamburger-icon{
+    /* border: 2px solid red; */
+    background:rgba(44, 40, 40, 0.816);
+    padding: 5rem;
+    margin: -4.5rem;
+    /* width: 300px; */
+}
+.item{
+    padding-bottom: 0.9rem;
+}
+.hamburger-icon input[type="checkbox"]:checked~.hamburger-item{
+    transform: translate(0%);
+    display: block;
+    color: white;
+}
+.hamburger-icon input[type="checkbox"]:checked ~.hamburger-lines .line{
+
+border: white;
+}
+
+.hamburger-icon input[type="checkbox"]{
+    display: block;
+    height: 39px;
+    width: 39px;
+    /* z-index: 5; */
+    opacity: 0;
+
+}
+
+.hamburger-lines{
+
+    display: block;
+    height: 41px;
+    width: 41px;
+    /* background: lightseagreen; */
+    margin-top: -2.7rem;
+    margin-left: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* z-index: 1; */
+}
+
+.hamburger-lines .line{
+  display: block;
+  width:100%;
+  height: 4px;
+  border: 2px solid #232323;
+  background: #232323;
+}
+.hamburger-icon input[type="checkbox"]:checked ~.hamburger-lines .line1{
+
+    transform: rotate(30deg);
+    transition: transform 0.4s ease-in-out;
+    }
+.hamburger-icon input[type="checkbox"]:checked ~.hamburger-lines .line3{
+    transform: rotate(-30deg);
+    transition: transform 0.4s ease-in-out;
+
+    }
+.hamburger-icon input[type="checkbox"]:checked ~.hamburger-lines .line2{
+   display: none;
+    }
+.hamburger-icon .line1{
+    transform-origin: left center
+
+}
+.hamburger-icon .line3{
+    transform-origin: left center
+}
